@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "prepublishOnly": "npm run build",
+    "build": "node build.js"
   },
   "keywords": [
     "news",
     "json",
     "static"
   ],
-  "author": "wellifabio",
+  "author": "wellifabio
   "license": "ISC",
   "description": "",
   "dependencies": {
