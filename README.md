@@ -18,4 +18,3 @@ CRUD - Exemplo de Aplicação Web FullStack para enviar e receber dados (Notíci
 npm install
 npm start
 ```
-- 
