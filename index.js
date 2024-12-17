@@ -13,5 +13,5 @@ app.use('/', router)
 app.use(express.static('public'))
 
 app.listen(PORT, () => {
-    console.log("Web respondendo em http://localhost:" + PORT)
+    console.log("API respondendo em http://localhost:" + PORT)
 })

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const News = require('./news');
+const News = require('./news_controller');
 
 router.post('/', News.create);
 router.get('/', News.read);
