@@ -15,10 +15,8 @@ const create = (req, res) => {
 }
 
 const read = async (req, res) => {
-    // const news = JSON.parse(fs.readFileSync(file, 'utf-8'))
-    // res.json(news).end()
-    const greeting = await get('greeting');
-    res.json(greeting).end()
+    const news = await get('news');
+    res.json(news).end()
 }
 
 const update = (req, res) => {
