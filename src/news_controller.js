@@ -3,6 +3,7 @@
 const fs = require("fs")
 const path = require("path")
 const file = path.join(__dirname, '../public/news_model.json')
+const { get } = require('@vercel/edge-config')
 
 const create = (req, res) => {
     const { title, img, content } = req.body
@@ -13,9 +14,11 @@ const create = (req, res) => {
     res.status(201).json({ id, title, img, content }).end()
 }
 
-const read = (req, res) => {
-    const news = JSON.parse(fs.readFileSync(file, 'utf-8'))
-    res.json(news).end()
+const read = async (req, res) => {
+    // const news = JSON.parse(fs.readFileSync(file, 'utf-8'))
+    // res.json(news).end()
+    const greeting = await get('greeting');
+    res.json(greeting).end()
 }
 
 const update = (req, res) => {
