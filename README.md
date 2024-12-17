@@ -1,5 +1,5 @@
 # Notícias
-CRUD - Exemplo de APP Web para adicionar notícias
+CRUD - Exemplo de API Web para enviar e receber dados (Notícias) via JSON
 
 ## Técnologias
 [NodeJS](https://nodejs.org/en)
