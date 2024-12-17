@@ -1,5 +1,9 @@
 # Notícias
-CRUD - Exemplo de API Web para enviar e receber dados (Notícias) via JSON
+CRUD - Exemplo de Aplicação Web FullStack para enviar e receber dados (Notícias) via JSON
+
+- CRUD (Create, Read, Update, Delete) Funcionalidades
+- MVC (Modelo, Visão e Controle) Estrutura
+- Back-End e Front-End
 
 ## Técnologias
 [NodeJS](https://nodejs.org/en)
@@ -14,3 +18,4 @@ CRUD - Exemplo de API Web para enviar e receber dados (Notícias) via JSON
 npm install
 npm start
 ```
+- 
