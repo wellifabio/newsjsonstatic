@@ -10,7 +10,6 @@ app.use(express.json())
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use('/', router)
-app.use(express.static('public'))
 
 app.listen(PORT, () => {
     console.log("API respondendo em http://localhost:" + PORT)
