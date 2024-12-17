@@ -8,7 +8,6 @@ const create = async(req, res) => {
     const news = await get('news');
     const id = news[news.length - 1].id + 1;
     news.push({ id, title, img, content });
-    // set('news', news);
     res.status(201).json({ id, title, img, content }).end();
 }
 
@@ -22,7 +21,6 @@ const update = async (req, res) => {
     const news = await get('news');
     const index = news.findIndex((news) => news.id == id)
     news[index] = { id, title, img, content }
-    // set('news', news);
     res.status(202).json({ id, title, img, content }).end()
 }
 
@@ -31,7 +29,6 @@ const del = async (req, res) => {
     const news = await get('news');
     const index = news.findIndex((news) => news.id == id)
     news.splice(index, 1)
-    // set('news', news);
     res.status(204).end()
 }
 
