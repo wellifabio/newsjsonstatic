@@ -10,12 +10,12 @@ const create = (req, res) => {
     const id = news[news.length - 1].id + 1
     news.push({ id, title, img, content })
     fs.writeFileSync(file, JSON.stringify(news))
-    res.status(201).json({ id, title, img, content })
+    res.status(201).json({ id, title, img, content }).end()
 }
 
 const read = (req, res) => {
     const news = JSON.parse(fs.readFileSync(file, 'utf-8'))
-    res.json(news)
+    res.json(news).end()
 }
 
 const update = (req, res) => {
@@ -24,7 +24,7 @@ const update = (req, res) => {
     const index = news.findIndex((news) => news.id == id)
     news[index] = { id, title, img, content }
     fs.writeFileSync(file, JSON.stringify(news))
-    res.status(202).json({ id, title, img, content })
+    res.status(202).json({ id, title, img, content }).end()
 }
 
 const del = (req, res) => {
@@ -33,7 +33,7 @@ const del = (req, res) => {
     const index = news.findIndex((news) => news.id == id)
     news.splice(index, 1)
     fs.writeFileSync(file, JSON.stringify(news))
-    res.status(204)
+    res.status(204).end()
 }
 
 module.exports = {
