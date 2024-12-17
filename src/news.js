@@ -2,7 +2,7 @@
 
 const fs = require("fs")
 const path = require("path")
-const file = path.join(__dirname, 'news.json')
+const file = path.join(__dirname, '../public/news.json')
 
 const create = (req, res) => {
     const { title, content } = req.body
