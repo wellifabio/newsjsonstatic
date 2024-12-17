@@ -5,12 +5,12 @@ const path = require("path")
 const file = path.join(__dirname, '../public/news_model.json')
 
 const create = (req, res) => {
-    const { title, content } = req.body
+    const { title, img, content } = req.body
     const news = JSON.parse(fs.readFileSync(file, 'utf-8'))
     const id = news[news.length - 1].id + 1
-    news.push({ id, title, content })
+    news.push({ id, title, img, content })
     fs.writeFileSync(file, JSON.stringify(news))
-    res.status(201).json({ id, title, content })
+    res.status(201).json({ id, title, img, content })
 }
 
 const read = (req, res) => {
@@ -19,12 +19,12 @@ const read = (req, res) => {
 }
 
 const update = (req, res) => {
-    const { id, title, content } = req.body
+    const { id, title, img, content } = req.body
     const news = JSON.parse(fs.readFileSync(file, 'utf-8'))
     const index = news.findIndex((news) => news.id == id)
-    news[index] = { id, title, content }
+    news[index] = { id, title, img, content }
     fs.writeFileSync(file, JSON.stringify(news))
-    res.status(202).json({ id, title, content })
+    res.status(202).json({ id, title, img, content })
 }
 
 const del = (req, res) => {
